@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  background: rgb(67, 0, 175);
+  background: radial-gradient(
+    circle,
+    rgba(67, 0, 175, 1) 0%,
+    rgba(62, 85, 255, 1) 100%
+  );
+}
+
+.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 2px solid white;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .navlinks {
+  display: flex;
+}
+
+.navbar .navlinks a {
+  color: white;
+  margin: 5px 10px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-carusel {
+  font-size: 32px;
+  color: white;
+  margin-right: 5em;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-carusel button {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border: none;
+  margin-top: 10px;
+  outline: none;
+  width: 12em;
+  height: 3em;
+  border-radius: 50px;
+  color: white;
+  font-size: 15px;
+  background-size: 200% 200%;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.hero-carusel button:hover {
+  animation: gradientMove 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-image {
+    order: 2;
+    margin: 20px 0;
+  }
+
+  .hero-carousel {
+    order: 1;
+    margin: 0;
+  }
+
+  .hero-carousel h1 {
+    font-size: 24px;
+  }
+
+  .hero-carousel button {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .navbar .navlinks {
+    flex-direction: column;
+  }
+
+  .navbar .navlinks a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+
+.about-section {
+  padding: 50px 20px;
+  background: white;
+  text-align: center;
+}
+
+.section-title h1 {
+  background: rgb(63, 94, 251);
+  font-size: 56px;
+  background: linear-gradient(
+    to left,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.section-title p {
+  font-size: 18px;
+  background: linear-gradient(
+    to left,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-title h1 {
+    font-size: 28px;
+  }
+
+  .section-title p {
+    font-size: 16px;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.customer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12em;
+  width: 240px;
+  border-radius: 50px;
+}
+
+.card-title i {
+  font-size: 48px;
+}
+
+.card-title h1 {
+  font-size: 48px;
+  background: linear-gradient(
+    to left,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.card-title span {
+  font-size: 48px;
+}
+
+.about-btn {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border: none;
+  margin-top: 30px;
+  outline: none;
+  width: 12em;
+  height: 3em;
+  border-radius: 50px;
+  color: white;
+  font-size: 15px;
+  background-size: 200% 200%;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.about-btn:hover {
+  animation: gradientMove 2s infinite;
+}
